@@ -16,7 +16,7 @@ namespace russu_vlad_MAP_labs.Controllers
     public class CustomersController : Controller
     {
         private readonly LibraryContext _context;
-        private string _baseUrl = "https://localhost:44349/api/Customers";
+        private string _baseUrl = "https://localhost:44340/api/Customers";
 
         public CustomersController(LibraryContext context)
         {
