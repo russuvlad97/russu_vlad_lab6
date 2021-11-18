@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 using LibraryModel.Data;
 using Microsoft.EntityFrameworkCore;
+using russu_vlad_MAP_labs.Hubs;
 
 namespace russu_vlad_MAP_labs
 {
@@ -29,6 +30,7 @@ namespace russu_vlad_MAP_labs
             services.AddControllersWithViews();
             services.AddDbContext<LibraryContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddSignalR();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +57,9 @@ namespace russu_vlad_MAP_labs
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                    );
+                endpoints.MapHub<ChatHub>("/chathub");
             });
         }
     }
