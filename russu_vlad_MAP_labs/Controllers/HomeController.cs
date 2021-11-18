@@ -47,5 +47,10 @@ namespace russu_vlad_MAP_labs.Controllers
                 };
             return View(await data.AsNoTracking().ToListAsync());
         }
+
+        public IActionResult Chat()
+        {
+            return View();
+        }
     }
 }
