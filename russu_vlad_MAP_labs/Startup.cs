@@ -51,6 +51,7 @@ namespace russu_vlad_MAP_labs
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -60,6 +61,7 @@ namespace russu_vlad_MAP_labs
                     pattern: "{controller=Home}/{action=Index}/{id?}"
                     );
                 endpoints.MapHub<ChatHub>("/chathub");
+                endpoints.MapRazorPages();
             });
         }
     }
