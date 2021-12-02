@@ -35,6 +35,8 @@ namespace russu_vlad_MAP_labs
             
             services.AddSignalR();
 
+            services.AddRazorPages();
+
             services.Configure<IdentityOptions>( options =>
             {
                 options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
@@ -49,6 +51,28 @@ namespace russu_vlad_MAP_labs
                 options.Password.RequireNonAlphanumeric = true;
                 options.Password.RequireUppercase = true;
                 options.Password.RequiredLength = 8;
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("OnlySales", policy =>
+                {
+                    policy.RequireClaim("Department", "Sales");
+                });
+            });
+
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("SalesManager", policy =>
+                {
+                    policy.RequireRole("Manager");
+                    policy.RequireClaim("Department", "Sales");
+                });
+            });
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.AccessDeniedPath = "/Identity/Account/AccesDenied";
             });
         }
 
