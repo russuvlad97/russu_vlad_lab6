@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "russu_vlad_MAP_labs", "russu_vlad_MAP_labs\russu_vlad_MAP_labs.csproj", "{C492AB4B-94FC-4292-A8A5-00DEF55CBE76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryModel", "LibraryModel\LibraryModel.csproj", "{935646BC-8C7F-4C62-952F-DC9D18471F0A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryModel", "LibraryModel\LibraryModel.csproj", "{935646BC-8C7F-4C62-952F-DC9D18471F0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryWebAPI", "LibraryWebAPI\LibraryWebAPI.csproj", "{54E85144-A01B-42EF-8F6F-564E3B196C83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryWebAPI", "LibraryWebAPI\LibraryWebAPI.csproj", "{54E85144-A01B-42EF-8F6F-564E3B196C83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcCustomerService", "GrpcCustomerService\GrpcCustomerService.csproj", "{52CF2E2B-AF07-4232-B94F-658A48C0750D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{54E85144-A01B-42EF-8F6F-564E3B196C83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54E85144-A01B-42EF-8F6F-564E3B196C83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54E85144-A01B-42EF-8F6F-564E3B196C83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52CF2E2B-AF07-4232-B94F-658A48C0750D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52CF2E2B-AF07-4232-B94F-658A48C0750D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52CF2E2B-AF07-4232-B94F-658A48C0750D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52CF2E2B-AF07-4232-B94F-658A48C0750D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
