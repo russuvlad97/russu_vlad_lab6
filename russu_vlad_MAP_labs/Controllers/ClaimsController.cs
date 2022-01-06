@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
 using russu_vlad_MAP_labs.Areas.Identity;
 using Microsoft.AspNetCore.Identity;
 using System.Security.Claims;
